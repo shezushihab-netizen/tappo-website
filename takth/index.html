@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Takth | Menu</title>
+
+  <title>TAKHT | Menu</title>
 
   <style>
     * {
@@ -13,104 +14,175 @@
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111111;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #55170f 0%,
+          #3a0d08 42%,
+          #210604 100%
+        );
+      color: #f4d18a;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 24px;
     }
 
-    .container {
+    .page {
       width: 100%;
-      max-width: 420px;
+      max-width: 430px;
+      min-height: calc(100vh - 48px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 38px 26px;
+      border: 1px solid #c99745;
+      border-radius: 120px 120px 28px 28px;
+      position: relative;
+      box-shadow:
+        0 0 0 5px rgba(201, 151, 69, 0.08),
+        0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(201, 151, 69, 0.45);
+      border-radius: 110px 110px 20px 20px;
+      pointer-events: none;
+    }
+
+    .content {
+      width: 100%;
+      position: relative;
+      z-index: 1;
     }
 
     .logo {
-      width: 110px;
-      height: 110px;
+      width: 150px;
+      height: 150px;
       object-fit: contain;
-      margin-bottom: 24px;
-    }
-
-    .logo-placeholder {
-      width: 110px;
-      height: 110px;
-      border: 1px solid #dddddd;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      font-size: 14px;
-      color: #777777;
+      margin-bottom: 28px;
     }
 
-    h1 {
-      font-size: 32px;
-      letter-spacing: 2px;
+    .restaurant-name {
+      font-size: clamp(38px, 11vw, 54px);
+      letter-spacing: 0.25em;
       margin: 0 0 12px;
+      padding-left: 0.25em;
+      font-weight: bold;
+      color: #e5ae55;
     }
 
-    p {
-      font-size: 16px;
-      color: #666666;
-      margin-bottom: 32px;
+    .subtitle {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.28em;
+      margin: 0 0 42px;
+      color: #e5ae55;
+    }
+
+    .welcome {
+      font-size: 25px;
+      line-height: 1.4;
+      margin: 0 0 32px;
+      color: #f7ead2;
     }
 
     .menu-button {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
       width: 100%;
-      padding: 17px;
-      background: #111111;
-      color: #ffffff;
+      padding: 19px 24px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #e7b45f, #c98d3c);
+      color: #351007;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
       font-weight: bold;
-      transition: opacity 0.2s;
+      letter-spacing: 0.2em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
 
     .menu-button:hover {
-      opacity: 0.85;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .arrow {
+      font-size: 24px;
+      line-height: 0;
     }
 
     .footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #aaaaaa;
+      margin-top: 48px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: #c99745;
+    }
+
+    @media (max-width: 380px) {
+      .page {
+        padding: 32px 20px;
+      }
+
+      .logo {
+        width: 125px;
+        height: 125px;
+      }
+
+      .welcome {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <main class="page">
 
-    <div class="logo-placeholder">
-      TAKTH
+    <div class="content">
+
+      <img
+        class="logo"
+        src="takht-logo.jpeg"
+        alt="Takht Restaurant logo"
+      >
+
+      <h1 class="restaurant-name">TAKHT</h1>
+
+      <p class="subtitle">AFGHANI &amp; PAKISTANI</p>
+
+      <p class="welcome">Welcome to our menu</p>
+
+      <a
+        class="menu-button"
+        href="https://drive.google.com/file/d/16stU4bZvjQ6GHVrDFFaN9gVqtzKxapsg/view?usp=drivesdk"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        VIEW MENU
+        <span class="arrow">→</span>
+      </a>
+
+      <div class="footer">
+        POWERED BY TAPPO
+      </div>
+
     </div>
 
-    <h1>TAKTH</h1>
-
-    <p>Welcome to our menu</p>
-
-    <a
-      class="menu-button"
-      href="https://drive.google.com/file/d/16stU4bZvjQ6GHVrDFFaN9gVqtzKxapsg/view?usp=drivesdk"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      VIEW MENU
-    </a>
-
-    <div class="footer">
-      Powered by Tappo
-    </div>
-
-  </div>
+  </main>
 
 </body>
 </html>
