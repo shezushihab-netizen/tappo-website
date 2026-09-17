@@ -4,23 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tappo — Coming Soon</title>
+
+  <title>Tappo | Coming Soon</title>
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html,
     body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #ffffff;
-      font-family: Arial, sans-serif;
       color: #111111;
-      padding: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 30px;
     }
 
     .container {
@@ -30,23 +38,23 @@
     }
 
     .logo {
-      width: 190px;
-      height: auto;
       display: block;
-      margin: 0 auto 38px;
-      object-fit: contain;
+      width: 190px;
+      max-width: 70%;
+      height: auto;
+      margin: 0 auto 40px;
     }
 
     h1 {
       margin: 0 0 15px;
       font-size: 32px;
+      line-height: 1.2;
       font-weight: 600;
-      letter-spacing: -0.5px;
     }
 
-    p {
+    .description {
       margin: 0 auto;
-      max-width: 390px;
+      max-width: 400px;
       color: #777777;
       font-size: 16px;
       line-height: 1.7;
@@ -57,111 +65,52 @@
       margin-top: 28px;
       color: #111111;
       font-size: 15px;
-      font-weight: 600;
       text-decoration: none;
-      border-bottom: 1px solid #111111;
-      padding-bottom: 3px;
-      transition: opacity 0.2s ease;
+      font-weight: 600;
     }
 
     .contact:hover {
-      opacity: 0.6;
+      opacity: 0.65;
     }
 
     .footer {
       margin-top: 45px;
-      font-size: 12px;
       color: #aaaaaa;
+      font-size: 12px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <img src="/Logo.jpeg" alt="Tappo logo" class="logo">
+  <main class="container">
+
+    <img
+      src="/Logo.jpeg"
+      alt="Tappo"
+      class="logo"
+    >
 
     <h1>Coming Soon</h1>
 
-    <p>
+    <p class="description">
       A smarter way to connect restaurants with their menus.
       Simple, elegant, and just a tap away.
     </p>
 
-    <a href="mailto:tapponfc@gmail.com" class="contact">
+    <a
+      href="mailto:tapponfc@gmail.com"
+      class="contact"
+    >
       tapponfc@gmail.com
     </a>
 
     <div class="footer">
-```
-       POWERED BY
-    ========================= */
-    .powered-by {
-      margin-bottom: 14px;
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      text-transform: lowercase;
-      color: rgba(17, 17, 17, 0.55);
-    }
-    /* =========================
-       TAPPO WORDMARK
-       Same styling as Boat
-    ========================= */
-    .tappo {
-      display: inline-block;
-      font-family:
-        "Arial Rounded MT Bold",
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
-      font-weight: 900;
-      font-size: clamp(76px, 20vw, 170px);
-      letter-spacing: 0.5px;
-      color: #111111;
-      transform: scaleX(1.08);
-      line-height: 0.9;
-    }
-    /* =========================
-       COMING SOON
-    ========================= */
-    .coming-soon {
-      margin-top: 42px;
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(17, 17, 17, 0.65);
-    }
-    /* =========================
-       MOBILE
-    ========================= */
-    @media (max-width: 480px) {
-      .powered-by {
-        font-size: 11px;
-        margin-bottom: 12px;
-      }
-      .tappo {
-        font-size: 21vw;
-      }
-      .coming-soon {
-        margin-top: 32px;
-        font-size: 12px;
-        letter-spacing: 0.14em;
-      }
-    }
-  </style>
-</head>
-<body>
-  <main class="landing">
-<div class="powered-by">
-  powered by
-</div>
-<div class="tappo">
-  tappo
-</div>
-<div class="coming-soon">
-  Coming Soon
-</div>
+      Digital menus by Tappo
+    </div>
+
   </main>
+
 </body>
 </html>
+```
