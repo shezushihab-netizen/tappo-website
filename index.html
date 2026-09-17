@@ -22,8 +22,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #ffffff;
       color: #111111;
-      font-family: Arial, Helvetica, sans-serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: geometricPrecision;
     }
@@ -32,19 +32,32 @@
       text-align: center;
       padding: 24px;
     }
+    .powered-by {
+      margin-bottom: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(14px, 2.5vw, 20px);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #111111;
+    }
     .logo {
       display: inline-block;
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(64px, 17vw, 150px);
-      font-weight: 800;
-      line-height: 0.9;
-      letter-spacing: -0.085em;
+      font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        Arial,
+        Helvetica,
+        sans-serif;
+      font-size: clamp(76px, 19vw, 170px);
+      font-weight: 900;
+      line-height: 0.85;
+      letter-spacing: -0.09em;
       color: #111111;
       white-space: nowrap;
     }
     .coming-soon {
-      margin-top: 34px;
+      margin-top: 42px;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: clamp(14px, 2.5vw, 20px);
       font-weight: 500;
       letter-spacing: 0.16em;
@@ -53,11 +66,15 @@
       color: #111111;
     }
     @media (max-width: 480px) {
+      .powered-by {
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
       .logo {
-        font-size: 19vw;
+        font-size: 20vw;
       }
       .coming-soon {
-        margin-top: 28px;
+        margin-top: 32px;
         font-size: 13px;
         letter-spacing: 0.14em;
       }
@@ -66,6 +83,7 @@
 </head>
 <body>
   <main class="container">
+    <div class="powered-by">powered by</div>
     <div class="logo" aria-label="TAPPO">TAPPO</div>
     <div class="coming-soon">Coming Soon</div>
   </main>
