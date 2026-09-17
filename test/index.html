@@ -1,181 +1,95 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffffff">
-  <title>tappo — Test</title>
+  <title>Tappo Test Menu</title>
+
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    body {
       margin: 0;
-      padding: 0;
-    }
-    html,
-    body {
-      width: 100%;
-      min-height: 100%;
-      background: #ffffff;
-    }
-    body {
       min-height: 100vh;
-      min-height: 100svh;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
       color: #111111;
-      -webkit-font-smoothing: antialiased;
+      padding: 24px;
     }
-    .page {
+
+    .container {
       width: 100%;
-      max-width: 560px;
-      padding: 40px 24px 60px;
+      max-width: 420px;
       text-align: center;
     }
-    /* =========================
-       BRANDING
-    ========================= */
-    .brand {
-      margin-bottom: 60px;
+
+    .logo {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto 35px;
+      object-fit: contain;
     }
-    .powered-by {
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: lowercase;
-      color: rgba(17, 17, 17, 0.45);
-      margin-bottom: 12px;
+
+    h1 {
+      font-size: 25px;
+      font-weight: 600;
+      margin: 0 0 25px;
     }
-    .tappo {
-      display: inline-block;
-      font-family:
-        "Arial Rounded MT Bold",
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
-      font-weight: 900;
-      font-size: 72px;
-      letter-spacing: 0.5px;
-      line-height: 0.9;
-      color: #111111;
-      transform: scaleX(1.08);
-    }
-    .subtitle {
-      margin-top: 25px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(17, 17, 17, 0.45);
-    }
-    /* =========================
-       TITLE
-    ========================= */
-    .title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 12px;
-    }
-    .description {
-      font-size: 14px;
-      line-height: 1.6;
-      color: rgba(17, 17, 17, 0.55);
-      margin-bottom: 32px;
-    }
-    /* =========================
-       RESTAURANT BUTTONS
-    ========================= */
-    .restaurant-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+
     .restaurant-button {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: block;
       width: 100%;
-      padding: 20px 22px;
+      padding: 17px 20px;
+      margin: 14px 0;
+      border-radius: 14px;
       background: #111111;
       color: #ffffff;
-      border: none;
-      border-radius: 5px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
       text-decoration: none;
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease;
+      font-size: 17px;
+      font-weight: 600;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
+
     .restaurant-button:hover {
-      background: #333333;
       transform: translateY(-2px);
+      opacity: 0.9;
     }
-    .restaurant-button span:last-child {
-      font-size: 18px;
-      font-weight: 400;
-    }
-    /* =========================
-       FOOTER
-    ========================= */
-    footer {
-      margin-top: 65px;
-      font-size: 10px;
-      letter-spacing: 1px;
-      color: rgba(17, 17, 17, 0.3);
-    }
-    /* =========================
-       MOBILE
-    ========================= */
-    @media (max-width: 480px) {
-      .page {
-        padding: 35px 20px 50px;
-      }
-      .brand {
-        margin-bottom: 50px;
-      }
-      .tappo {
-        font-size: 62px;
-      }
-      .title {
-        font-size: 28px;
-      }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 12px;
+      color: #999999;
     }
   </style>
 </head>
+
 <body>
-  <main class="page">
-<!-- BRANDING -->
-<header class="brand">
-  <div class="powered-by">powered by</div>
-  <div class="tappo">tappo</div>
-  <div class="subtitle">Test Dashboard</div>
-</header>
-<!-- TITLE -->
-<h1 class="title">
-  Choose a restaurant
-</h1>
-<p class="description">
-  Select a menu to preview and test.
-</p>
-<!-- RESTAURANTS -->
-<nav class="restaurant-list" aria-label="Restaurant menus">
-  <a href="/takth/" class="restaurant-button">
-    <span>Takht</span>
-    <span>→</span>
-  </a>
-  <a href="/boat/" class="restaurant-button">
-    <span>Boat Seafood</span>
-    <span>→</span>
-  </a>
-</nav>
-<footer>
-  tappo · internal test page
-</footer>
-  </main>
+  <div class="container">
+
+    <img src="/logo.png" alt="Tappo logo" class="logo">
+
+    <h1>Choose a restaurant</h1>
+
+    <a href="/takht/" class="restaurant-button">
+      Takht
+    </a>
+
+    <a href="/boat/" class="restaurant-button">
+      Boat
+    </a>
+
+    <div class="footer">
+      Internal test page
+    </div>
+
+  </div>
 </body>
 </html>
+```
