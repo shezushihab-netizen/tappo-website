@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
   <title>TAPPO — Coming Soon</title>
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     html,
     body {
-      margin: 0;
       width: 100%;
       min-height: 100%;
       background: #ffffff;
@@ -22,70 +23,85 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
       color: #111111;
       -webkit-font-smoothing: antialiased;
       text-rendering: geometricPrecision;
     }
-    .container {
+    .landing {
       width: 100%;
       text-align: center;
       padding: 24px;
     }
+    /* =========================
+       POWERED BY
+    ========================= */
     .powered-by {
-      margin-bottom: 12px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(14px, 2.5vw, 20px);
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: #111111;
+      margin-bottom: 14px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: lowercase;
+      color: rgba(17, 17, 17, 0.55);
     }
-    .logo {
+    /* =========================
+       TAPPO WORDMARK
+       Same styling as Boat
+    ========================= */
+    .tappo {
       display: inline-block;
       font-family:
         "Arial Rounded MT Bold",
         "Trebuchet MS",
         Arial,
-        Helvetica,
         sans-serif;
-      font-size: clamp(76px, 19vw, 170px);
       font-weight: 900;
-      line-height: 0.85;
-      letter-spacing: -0.09em;
+      font-size: clamp(76px, 20vw, 170px);
+      letter-spacing: 0.5px;
       color: #111111;
-      white-space: nowrap;
+      transform: scaleX(1.08);
+      line-height: 0.9;
     }
+    /* =========================
+       COMING SOON
+    ========================= */
     .coming-soon {
       margin-top: 42px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(14px, 2.5vw, 20px);
+      font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.16em;
-      line-height: 1.2;
       text-transform: uppercase;
-      color: #111111;
+      color: rgba(17, 17, 17, 0.65);
     }
+    /* =========================
+       MOBILE
+    ========================= */
     @media (max-width: 480px) {
       .powered-by {
-        margin-bottom: 10px;
-        font-size: 13px;
+        font-size: 11px;
+        margin-bottom: 12px;
       }
-      .logo {
-        font-size: 20vw;
+      .tappo {
+        font-size: 21vw;
       }
       .coming-soon {
         margin-top: 32px;
-        font-size: 13px;
+        font-size: 12px;
         letter-spacing: 0.14em;
       }
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <div class="powered-by">powered by</div>
-    <div class="logo" aria-label="TAPPO">TAPPO</div>
-    <div class="coming-soon">Coming Soon</div>
+  <main class="landing">
+<div class="powered-by">
+  powered by
+</div>
+<div class="tappo">
+  TAPPO
+</div>
+<div class="coming-soon">
+  Coming Soon
+</div>
   </main>
 </body>
 </html>
