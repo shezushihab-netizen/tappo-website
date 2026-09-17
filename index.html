@@ -3,44 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
   <title>TAPPO — Coming Soon</title>
   <style>
     * {
       box-sizing: border-box;
     }
+    html,
     body {
       margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #ffffff;
+    }
+    body {
       min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #ffffff;
       color: #111111;
       font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
     }
     .container {
+      width: 100%;
       text-align: center;
       padding: 24px;
     }
     .logo {
+      display: inline-block;
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(64px, 14vw, 120px);
+      font-size: clamp(64px, 17vw, 150px);
       font-weight: 800;
-      letter-spacing: -0.08em;
-      line-height: 1;
-      margin-bottom: 32px;
+      line-height: 0.9;
+      letter-spacing: -0.085em;
+      color: #111111;
+      white-space: nowrap;
     }
     .coming-soon {
-      font-size: 18px;
+      margin-top: 34px;
+      font-size: clamp(14px, 2.5vw, 20px);
       font-weight: 500;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
+      line-height: 1.2;
       text-transform: uppercase;
+      color: #111111;
+    }
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 19vw;
+      }
+      .coming-soon {
+        margin-top: 28px;
+        font-size: 13px;
+        letter-spacing: 0.14em;
+      }
     }
   </style>
 </head>
 <body>
   <main class="container">
-    <div class="logo">TAPPO</div>
+    <div class="logo" aria-label="TAPPO">TAPPO</div>
     <div class="coming-soon">Coming Soon</div>
   </main>
 </body>
