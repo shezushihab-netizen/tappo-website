@@ -83,9 +83,11 @@
       padding: 30px 22px;
     }
 
+    /* BIGGER BOAT LOGO */
+
     .logo {
-      width: 155px;
-      max-width: 48vw;
+      width: 240px;
+      max-width: 70vw;
       height: auto;
       object-fit: contain;
     }
@@ -413,12 +415,12 @@
 
     /* =========================
        TAPPO CREDIT
-       Only TAPPO gets the
-       rounded / bubbly style.
     ========================= */
 
     .powered-by {
-      margin-top: 22px;
+      margin-top: 24px;
+
+      font-family: Arial, Helvetica, sans-serif;
 
       font-size: 9px;
 
@@ -442,13 +444,13 @@
 
       font-weight: 900;
 
-      font-size: 12px;
+      font-size: 13px;
 
       letter-spacing: 0.5px;
 
       color: #f5f2e9;
 
-      transform: scaleX(1.05);
+      transform: scaleX(1.08);
 
       transition:
         transform 0.2s ease,
@@ -456,7 +458,8 @@
     }
 
     .tappo:hover {
-      transform: scaleX(1.05) translateY(-1px);
+      transform: scaleX(1.08) translateY(-1px);
+
       opacity: 0.85;
     }
 
@@ -465,6 +468,11 @@
     ========================= */
 
     @media (max-width: 600px) {
+
+      .logo {
+        width: 220px;
+        max-width: 72vw;
+      }
 
       .feature-grid {
         grid-template-columns: 1fr;
@@ -481,6 +489,14 @@
 
       .feature:last-child {
         border-bottom: none;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .logo {
+        width: 195px;
+        max-width: 72vw;
       }
     }
   </style>
