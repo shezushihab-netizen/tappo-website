@@ -109,19 +109,28 @@
       font-size: 15px;
       font-weight: bold;
       letter-spacing: 0.2em;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.2);
     }
 
     .menu-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.3);
     }
 
     .arrow {
       font-size: 24px;
       line-height: 0;
     }
+
+    /* =========================
+       POWERED BY TAPPO
+       MATCHES BOAT
+    ========================= */
 
     .footer {
       margin-top: 48px;
@@ -131,15 +140,12 @@
       color: #c99745;
     }
 
-    /* TAPPO */
-
     .powered-by {
-      margin-top: 22px;
-      font-family: Arial, sans-serif;
+      margin-top: 24px;
       font-size: 9px;
       letter-spacing: 1.5px;
       text-transform: lowercase;
-      color: rgba(201, 151, 69, 0.65);
+      color: rgba(245, 242, 233, 0.42);
     }
 
     .tappo {
@@ -151,19 +157,26 @@
         Arial,
         sans-serif;
       font-weight: 900;
-      font-size: 12px;
+      font-size: 13px;
       letter-spacing: 0.5px;
-      color: #e5ae55;
-      transform: scaleX(1.05);
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      color: #f5f2e9;
+      transform: scaleX(1.08);
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
     }
 
     .tappo:hover {
-      transform: scaleX(1.05) translateY(-1px);
+      transform: scaleX(1.08) translateY(-1px);
       opacity: 0.85;
     }
 
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 380px) {
+
       .page {
         padding: 32px 20px;
       }
@@ -192,11 +205,17 @@
         alt="Takht Restaurant logo"
       >
 
-      <h1 class="restaurant-name">TAKHT</h1>
+      <h1 class="restaurant-name">
+        TAKHT
+      </h1>
 
-      <p class="subtitle">AFGHANI &amp; PAKISTANI</p>
+      <p class="subtitle">
+        AFGHANI &amp; PAKISTANI
+      </p>
 
-      <p class="welcome">Welcome to our menu</p>
+      <p class="welcome">
+        Welcome to our menu
+      </p>
 
       <a
         class="menu-button"
