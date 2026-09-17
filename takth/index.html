@@ -131,6 +131,38 @@
       color: #c99745;
     }
 
+    /* TAPPO */
+
+    .powered-by {
+      margin-top: 22px;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: lowercase;
+      color: rgba(201, 151, 69, 0.65);
+    }
+
+    .tappo {
+      display: inline-block;
+      margin-left: 4px;
+      font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      color: #e5ae55;
+      transform: scaleX(1.05);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .tappo:hover {
+      transform: scaleX(1.05) translateY(-1px);
+      opacity: 0.85;
+    }
+
     @media (max-width: 380px) {
       .page {
         padding: 32px 20px;
@@ -177,10 +209,12 @@
       </a>
 
       <div class="footer">
+
         <div class="powered-by">
-  powered by
-  <span class="tappo">TAPPO</span>
-</div>
+          powered by
+          <span class="tappo">TAPPO</span>
+        </div>
+
       </div>
 
     </div>
