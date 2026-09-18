@@ -29,7 +29,10 @@
       padding: 24px 18px 30px;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+       ========================= */
+
     .header {
       display: flex;
       align-items: center;
@@ -37,18 +40,10 @@
       margin-bottom: 22px;
     }
 
-    /*
-      Tappo vector logo
-      Exact cream: #f4f4e9
-      No background
-    */
     .logo {
       width: 105px;
-      height: 30px;
-      background-color: #f4f4e9;
-
-      -webkit-mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
-      mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
+      height: auto;
+      display: block;
     }
 
     .save-btn {
@@ -64,9 +59,14 @@
       gap: 7px;
       text-decoration: none;
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
-    /* PROFILE CARD */
+
+    /* =========================
+       PROFILE CARD
+       ========================= */
+
     .profile-card {
       background: #f4f4e9;
       border-radius: 22px;
@@ -99,21 +99,17 @@
       margin-bottom: 23px;
     }
 
-    /*
-      Tappo vector logo
-      Exact green: #003d32
-      No background
-    */
     .small-logo {
       width: 105px;
-      height: 30px;
-      background-color: #003d32;
-
-      -webkit-mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
-      mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
+      height: auto;
+      display: block;
     }
 
-    /* ACTIONS */
+
+    /* =========================
+       ACTIONS
+       ========================= */
+
     .actions {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -170,7 +166,11 @@
       word-break: break-word;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+       ========================= */
+
     .footer {
       text-align: center;
       color: rgba(255,255,255,0.88);
@@ -191,7 +191,13 @@
       letter-spacing: 0.2px;
     }
 
+
+    /* =========================
+       DESKTOP
+       ========================= */
+
     @media (min-width: 600px) {
+
       body {
         display: flex;
         justify-content: center;
@@ -201,22 +207,28 @@
         padding-top: 40px;
         padding-bottom: 40px;
       }
+
     }
   </style>
 </head>
+
 
 <body>
 
   <main class="page">
 
-    <!-- HEADER -->
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
     <header class="header">
 
-      <div
+      <img
+        src="tappo_logo_top.svg"
+        alt="Tappo"
         class="logo"
-        role="img"
-        aria-label="Tappo"
-      ></div>
+      >
 
       <a
         href="javascript:void(0)"
@@ -230,11 +242,14 @@
     </header>
 
 
-    <!-- PROFILE -->
+    <!-- =========================
+         PROFILE
+         ========================= -->
+
     <section class="profile-card">
 
       <img
-        src="../Shehzad.jpeg"
+        src="Shehzad.jpeg"
         alt="Muhammed Shehzad Shihab"
         class="photo"
       >
@@ -249,19 +264,25 @@
           Founder
         </p>
 
-        <div
+        <img
+          src="tappo_logo_small.svg"
+          alt="Tappo"
           class="small-logo"
-          role="img"
-          aria-label="Tappo"
-        ></div>
+        >
 
       </div>
 
     </section>
 
 
-    <!-- CONTACT ACTIONS -->
+    <!-- =========================
+         CONTACT ACTIONS
+         ========================= -->
+
     <section class="actions">
+
+
+      <!-- EMAIL -->
 
       <a
         class="action"
@@ -270,8 +291,18 @@
 
         <div class="action-top">
 
-          <svg class="icon" viewBox="0 0 24 24">
-            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+          >
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+            ></rect>
+
             <path d="M3 7l9 6 9-6"></path>
           </svg>
 
@@ -290,6 +321,8 @@
       </a>
 
 
+      <!-- CALL -->
+
       <a
         class="action"
         href="tel:0504211946"
@@ -297,7 +330,11 @@
 
         <div class="action-top">
 
-          <svg class="icon" viewBox="0 0 24 24">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+          >
+
             <path d="M22 16.9v3a2 2 0 0 1-2.2 2
                      19.8 19.8 0 0 1-8.6-3.1
                      19.5 19.5 0 0 1-6-6
@@ -311,6 +348,7 @@
                      c.9.3 1.8.6 2.8.7
                      A2 2 0 0 1 22 16.9z">
             </path>
+
           </svg>
 
           <span class="arrow">›</span>
@@ -330,7 +368,10 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
     <footer class="footer">
 
       <div class="footer-line"></div>
@@ -345,7 +386,12 @@
   </main>
 
 
+  <!-- =========================
+       CONTACT SAVE
+       ========================= -->
+
   <script>
+
     function saveContact() {
 
       const vCard =
@@ -358,22 +404,29 @@ TEL;TYPE=CELL:0504211946
 EMAIL:tapponfc@gmail.com
 END:VCARD`;
 
-      const blob = new Blob([vCard], {
-        type: "text/vcard;charset=utf-8"
-      });
+      const blob = new Blob(
+        [vCard],
+        {
+          type: "text/vcard;charset=utf-8"
+        }
+      );
 
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");
+
       link.href = url;
       link.download = "Muhammed_Shehzad_Shihab.vcf";
 
       document.body.appendChild(link);
+
       link.click();
+
       document.body.removeChild(link);
 
       URL.revokeObjectURL(url);
     }
+
   </script>
 
 </body>
