@@ -37,10 +37,18 @@
       margin-bottom: 22px;
     }
 
+    /*
+      Tappo vector logo
+      Exact cream: #f4f4e9
+      No background
+    */
     .logo {
       width: 105px;
-      height: auto;
-      object-fit: contain;
+      height: 30px;
+      background-color: #f4f4e9;
+
+      -webkit-mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
+      mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
     }
 
     .save-btn {
@@ -91,10 +99,18 @@
       margin-bottom: 23px;
     }
 
+    /*
+      Tappo vector logo
+      Exact green: #003d32
+      No background
+    */
     .small-logo {
       width: 105px;
-      height: auto;
-      object-fit: contain;
+      height: 30px;
+      background-color: #003d32;
+
+      -webkit-mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
+      mask: url("../tappo_logo_vector.svg") center / contain no-repeat;
     }
 
     /* ACTIONS */
@@ -196,13 +212,17 @@
     <!-- HEADER -->
     <header class="header">
 
-      <img
-        src="../tappo_top_exact.jpg"
-        alt="Tappo"
+      <div
         class="logo"
-      >
+        role="img"
+        aria-label="Tappo"
+      ></div>
 
-      <a href="javascript:void(0)" class="save-btn" onclick="saveContact()">
+      <a
+        href="javascript:void(0)"
+        class="save-btn"
+        onclick="saveContact()"
+      >
         Tap to Save
         ↓
       </a>
@@ -229,11 +249,11 @@
           Founder
         </p>
 
-        <img
-          src="../Tappo_Small_Exact.jpg"
-          alt="Tappo"
+        <div
           class="small-logo"
-        >
+          role="img"
+          aria-label="Tappo"
+        ></div>
 
       </div>
 
