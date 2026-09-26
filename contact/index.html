@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#003d32">
 
-  <title>Muhammed Shehzad Shihab | Tappo</title>
+  <title>Muhammed Shehzad Shihab | Tappo Connect</title>
 
   <style>
     * {
@@ -40,6 +40,11 @@
       margin-bottom: 22px;
     }
 
+    .logo-link {
+      display: inline-block;
+      line-height: 0;
+    }
+
     .logo {
       width: 105px;
       height: auto;
@@ -60,8 +65,8 @@
       text-decoration: none;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      cursor: pointer;
     }
-
 
     /* =========================
        PROFILE CARD
@@ -105,67 +110,78 @@
       display: block;
     }
 
-
     /* =========================
-       ACTIONS
+       ACTION BUTTONS
        ========================= */
 
     .actions {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
       margin-top: 18px;
     }
 
     .action {
       background: #f4f4e9;
       border-radius: 18px;
-      padding: 18px 16px;
-      min-height: 100px;
+      padding: 16px 8px;
+      min-height: 105px;
       text-decoration: none;
       color: #003d32;
       box-shadow: 0 10px 25px rgba(0,0,0,0.12);
       transition: transform 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .action:active {
-      transform: scale(0.97);
+      transform: scale(0.96);
     }
 
-    .action-top {
+    .action-icon-wrap {
+      height: 31px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 13px;
+      justify-content: center;
+      margin-bottom: 11px;
     }
 
     .icon {
-      width: 25px;
-      height: 25px;
+      width: 27px;
+      height: 27px;
       stroke: #007765;
       stroke-width: 1.8;
       fill: none;
     }
 
-    .arrow {
-      font-size: 24px;
-      color: #007765;
+    .action-label {
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.5px;
+      color: #003d32;
+    }
+
+    /* =========================
+       LINKEDIN
+       ========================= */
+
+    .linkedin-icon {
+      width: 27px;
+      height: 27px;
+      border-radius: 5px;
+      background: #0077b5;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       line-height: 1;
     }
-
-    .action-label {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      margin-bottom: 6px;
-    }
-
-    .action-value {
-      font-size: 13px;
-      color: #48524f;
-      word-break: break-word;
-    }
-
 
     /* =========================
        FOOTER
@@ -190,7 +206,6 @@
       line-height: 1.45;
       letter-spacing: 0.2px;
     }
-
 
     /* =========================
        DESKTOP
@@ -224,11 +239,25 @@
 
     <header class="header">
 
-      <img
-        src="tappo_logo_top.svg"
-        alt="Tappo"
-        class="logo"
+
+      <!-- TAPPO LOGO -->
+
+      <a
+        href="https://tappo.tappo.workers.dev/"
+        class="logo-link"
+        aria-label="Visit Tappo"
       >
+
+        <img
+          src="tappo_logo_top.svg"
+          alt="Tappo"
+          class="logo"
+        >
+
+      </a>
+
+
+      <!-- SAVE CONTACT -->
 
       <a
         href="javascript:void(0)"
@@ -253,6 +282,7 @@
         alt="Muhammed Shehzad Shihab"
         class="photo"
       >
+
 
       <div class="profile-info">
 
@@ -287,14 +317,17 @@
       <a
         class="action"
         href="mailto:tapponfc@gmail.com"
+        aria-label="Email Shehzad"
       >
 
-        <div class="action-top">
+        <div class="action-icon-wrap">
 
           <svg
             class="icon"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
+
             <rect
               x="3"
               y="5"
@@ -304,18 +337,13 @@
             ></rect>
 
             <path d="M3 7l9 6 9-6"></path>
-          </svg>
 
-          <span class="arrow">›</span>
+          </svg>
 
         </div>
 
         <div class="action-label">
           EMAIL
-        </div>
-
-        <div class="action-value">
-          tapponfc@gmail.com
         </div>
 
       </a>
@@ -325,14 +353,16 @@
 
       <a
         class="action"
-        href="tel:0504211946"
+        href="tel:+971504211946"
+        aria-label="Call Shehzad"
       >
 
-        <div class="action-top">
+        <div class="action-icon-wrap">
 
           <svg
             class="icon"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
 
             <path d="M22 16.9v3a2 2 0 0 1-2.2 2
@@ -351,19 +381,42 @@
 
           </svg>
 
-          <span class="arrow">›</span>
-
         </div>
 
         <div class="action-label">
           CALL
         </div>
 
-        <div class="action-value">
-          050 421 1946
+      </a>
+
+
+      <!-- LINKEDIN -->
+
+      <a
+        class="action"
+        href="https://www.linkedin.com/in/muhammed-shehzad-shihab-841139170/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Shehzad on LinkedIn"
+      >
+
+        <div class="action-icon-wrap">
+
+          <div
+            class="linkedin-icon"
+            aria-hidden="true"
+          >
+            in
+          </div>
+
+        </div>
+
+        <div class="action-label">
+          LINKEDIN
         </div>
 
       </a>
+
 
     </section>
 
@@ -383,18 +436,19 @@
 
     </footer>
 
+
   </main>
 
 
   <!-- =========================
-       CONTACT SAVE
+       SAVE CONTACT
        ========================= -->
 
   <script>
 
-  function saveContact() {
+    function saveContact() {
 
-    const vCard =
+      const vCard =
 `BEGIN:VCARD
 VERSION:3.0
 N:Shihab;Muhammed Shehzad;;;
@@ -403,35 +457,37 @@ ORG:Tappo
 TITLE:Sales
 TEL;TYPE=CELL:+971504211946
 EMAIL;TYPE=WORK:tapponfc@gmail.com
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/muhammed-shehzad-shihab-841139170/
 END:VCARD`;
 
-    const blob = new Blob(
-      [vCard],
-      {
-        type: "text/vcard;charset=utf-8"
-      }
-    );
+      const blob = new Blob(
+        [vCard],
+        {
+          type: "text/vcard;charset=utf-8"
+        }
+      );
 
-    const url = URL.createObjectURL(blob);
+      const url = URL.createObjectURL(blob);
 
-    const link = document.createElement("a");
+      const link = document.createElement("a");
 
-    link.href = url;
-    link.download = "Muhammed_Shehzad_Shihab.vcf";
+      link.href = url;
+      link.download = "Muhammed_Shehzad_Shihab.vcf";
 
-    document.body.appendChild(link);
+      document.body.appendChild(link);
 
-    link.click();
+      link.click();
 
-    document.body.removeChild(link);
+      document.body.removeChild(link);
 
-    setTimeout(() => {
-      URL.revokeObjectURL(url);
-    }, 1000);
+      setTimeout(() => {
+        URL.revokeObjectURL(url);
+      }, 1000);
 
-  }
+    }
 
-</script>
+  </script>
+
 
 </body>
 </html>
