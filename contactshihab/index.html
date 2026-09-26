@@ -29,13 +29,20 @@
       padding: 24px 18px 30px;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+       ========================= */
 
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 22px;
+    }
+
+    .logo-link {
+      display: inline-block;
+      line-height: 0;
     }
 
     .logo {
@@ -60,7 +67,9 @@
       -webkit-backdrop-filter: blur(10px);
     }
 
-    /* PROFILE CARD */
+    /* =========================
+       PROFILE CARD
+       ========================= */
 
     .profile-card {
       background: #f4f4e9;
@@ -101,19 +110,15 @@
       margin-bottom: 20px;
     }
 
-    /*
-      IMPORTANT:
-      The SVG itself should NOT contain a background rectangle.
-      This lets the #f4f4e9 profile card show through perfectly.
-    */
-
     .company-logo {
       width: 130px;
       height: auto;
       display: block;
     }
 
-    /* ACTIONS */
+    /* =========================
+       CONTACT ACTIONS
+       ========================= */
 
     .actions {
       display: grid;
@@ -171,7 +176,9 @@
       word-break: break-word;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+       ========================= */
 
     .footer {
       text-align: center;
@@ -193,7 +200,9 @@
       letter-spacing: 0.2px;
     }
 
-    /* DESKTOP */
+    /* =========================
+       DESKTOP
+       ========================= */
 
     @media (min-width: 600px) {
 
@@ -211,19 +220,33 @@
   </style>
 </head>
 
+
 <body>
 
   <main class="page">
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+         ========================= -->
 
     <header class="header">
 
-      <img
-        src="tappo_logo_top.svg"
-        alt="Tappo"
-        class="logo"
+      <!-- Tappo logo → Coming Soon homepage -->
+
+      <a
+        href="https://tappo.tappo.workers.dev/"
+        class="logo-link"
+        aria-label="Visit Tappo"
       >
+        <img
+          src="tappo_logo_top.svg"
+          alt="Tappo"
+          class="logo"
+        >
+      </a>
+
+
+      <!-- Save Contact -->
 
       <a
         href="javascript:void(0)"
@@ -236,7 +259,10 @@
 
     </header>
 
-    <!-- PROFILE -->
+
+    <!-- =========================
+         PROFILE
+         ========================= -->
 
     <section class="profile-card">
 
@@ -270,9 +296,13 @@
 
     </section>
 
-    <!-- CONTACT ACTIONS -->
+
+    <!-- =========================
+         CONTACT ACTIONS
+         ========================= -->
 
     <section class="actions">
+
 
       <!-- EMAIL -->
 
@@ -286,7 +316,9 @@
           <svg
             class="icon"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
+
             <rect
               x="3"
               y="5"
@@ -296,6 +328,7 @@
             ></rect>
 
             <path d="M3 7l9 6 9-6"></path>
+
           </svg>
 
           <span class="arrow">›</span>
@@ -312,6 +345,7 @@
 
       </a>
 
+
       <!-- CALL -->
 
       <a
@@ -324,7 +358,9 @@
           <svg
             class="icon"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
+
             <path d="M22 16.9v3a2 2 0 0 1-2.2 2
                      19.8 19.8 0 0 1-8.6-3.1
                      19.5 19.5 0 0 1-6-6
@@ -338,6 +374,7 @@
                      c.9.3 1.8.6 2.8.7
                      A2 2 0 0 1 22 16.9z">
             </path>
+
           </svg>
 
           <span class="arrow">›</span>
@@ -356,7 +393,10 @@
 
     </section>
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
     <footer class="footer">
 
@@ -371,7 +411,10 @@
 
   </main>
 
-  <!-- CONTACT SAVE -->
+
+  <!-- =========================
+       SAVE CONTACT
+       ========================= -->
 
   <script>
 
